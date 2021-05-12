@@ -14,6 +14,5 @@ from app import views
 
 
 # Load the config file
-#error when capitalizing C
 
 app.config.from_object('config')
