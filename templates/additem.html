@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Item Page
+{% endblock %}
+
+
+{% block content %}
+<body class="text-center">
+	<div class="container">
+		<form method="POST" class="form-register" style="color:white">
+			{{ form.hidden_tag() }}
+		<img class="img-fluid" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/pocoo_flask_logo_icon_168045.png">
+		<h1 class="h3 mb-3 font-weight-normal">
+			Enter Item
+		</h1>
+		<br>
+			{{ form.brand.label() }}
+			{{ form.brand(class="form-control", placeholder="Brand") }}
+
+			{{ form.name.label() }}
+			{{ form.name(class="form-control", placeholder="Name") }}
+
+			{{ form.price.label() }}
+			{{ form.price(class="form-control", placeholder="Price") }}
+
+			{{ form.barcode.label() }}
+			{{ form.barcode(class="form-control", placeholder="Barcode") }}
+
+			{{ form.description.label() }}
+			{{ form.description(class="form-control", placeholder="Description") }}
+
+			<br>
+
+			{{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+		</form>
+	</div>
+</body>
+{% endblock %}
